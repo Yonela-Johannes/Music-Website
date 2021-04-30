@@ -1,0 +1,131 @@
+button{
+    background: none;
+    color: none;
+    border: none;
+    outline: none;
+}
+
+.audio__player{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    width: 100%;
+    padding: 5px;
+    padding-top: 0;
+    color: white;
+    background:var(--media-playerBg);
+    place-items: center;
+    display: flex;
+    /* border: 1px solid var(--media-player-br); */ 
+}
+
+.song__title{
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    text-justify: center;
+}
+
+.media__player__buttons{
+    margin: 10px 20px;
+
+}
+.media__player__buttons img{
+    width: 20px;
+    margin: 10px;
+    opacity: 0.7;
+    filter: invert(1);
+}
+/* .media__player__buttons img:hover{
+    background: var(--media-playerHover);
+    border-radius: 80%;
+} */
+
+
+/* ----------------hover buttons---------------------- */
+
+.media__player__buttons img:hover{
+    width: 22px;
+    margin: 10px;
+    opacity: 2;
+    color: var(--secondary-leftSide-Bg);
+    filter: invert(0);
+}
+
+
+/* ----------------------------------Progress__bar__________________ */
+#progress{
+    width: 50%;
+}
+/* #run-time{
+    place-items: center;
+}
+#current-time, #song-duration{
+    margin: 15px;
+    color: black;
+} */
+
+.volume-control img{
+    width: 20px;
+    width: 20px;
+}
+
+.play_icon{
+    padding-left: 5px;
+    border-radius: 50%;
+    outline: none;
+}
+    .play_icon{
+        height: 20px;
+        margin: 10px;
+
+    }
+.pause{
+    /* display: none;  */
+    padding-left: 0 1.6px;
+}
+    .pause{
+        height: 20px;
+        margin: 10px;
+
+    }
+
+.download_btn ,#download_btn img{
+    height: 30px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.repeat-active{
+    background-color: blue;
+}
+/* ----------------------------------Progress__bar__________________ */
+
+._playList_Songs{
+    font-size: var(--tertiary-fs);
+    flex-direction: row;
+    cursor: pointer;
+    margin: 50px;
+}
+
+.playlist a:hover{
+    color: var(--media-player-br);
+    background: var(--media-playerBg);
+}
+
+/* __________________________Second AudioPlayer with canvas_________________ */
+
+/* .audioPlayer{
+    background: blue;
+    max-width: 100%;
+    
+} */
+
+
+.playlist a{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+
+}
