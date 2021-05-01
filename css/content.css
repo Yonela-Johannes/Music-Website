@@ -22,27 +22,28 @@
 .body_content .music_title span:nth-child(6), .body_content .list_block span:nth-child(6){width: 8%;}
 .body_content .music_title span:nth-child(7), .body_content .list_block span:nth-child(7){width: 10%;}
 .body_content .music_title span:nth-child(8), .body_content .list_block span:nth-child(8){width: 40%;}
+
 .body_content .list .list_block{
     position: relative;
-    padding: 20px 5px;
+    padding: 20px 10px;
     background: var(--primary-leftSide-Bg);
     border: 1px solid transparent;
     margin-top: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
 .body_content .list_block span{
     font-size: var(--tertiary-fs);
-    font-weight: 400;
     margin: 0 12px;
-    letter-spacing: normal;
+    letter-spacing: 4px;
     color: var(--span-color) !important; 
 }
 
 .body_content .list_block #download_btn{
-    right: 30px;
+    right: 20px;
 }
 
 .body_content .list_block #download_btn:hover{
@@ -50,7 +51,6 @@
 }
 
 .title_list{
-    color: var(--primary-color);
     padding: 10px;
 }
 
@@ -62,11 +62,11 @@
 }
 .body_content .beat_animation ul li{
     list-style: none;
-    height: 40px;
+    height: 20px;
     width: 5px;
     background-color: white;
     display: inline-block;
-    margin: 0 5px;
+    margin: 5px 5px;
     transform-origin: bottom;
     opacity: .1;
     animation: beat 1s linear 0s infinite;

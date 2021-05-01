@@ -1,8 +1,3 @@
-window.addEventListener('load', function(){
-    const loader = document.getElementById('loader');
-    loader.className += " hidden"; 
-});
-
 // get Elems
 const slides = document.querySelectorAll('.slide');
 const auto = true;

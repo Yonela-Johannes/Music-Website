@@ -28,9 +28,9 @@
     --lineHeight: 1.5;
     --letter-Spacing: 5px;
     --word-spacing: 0.8em;
-    --primary-fs: 2.5em;
-    --secondary-fs: 2.3em;
-    --tertiary-fs: 1.4em;
+    --primary-fs: 1.9em;
+    --secondary-fs: 1.4em;
+    --tertiary-fs: 1.1em;
     --tertiary_fw: 700;
 
     /* Playing content */
@@ -76,34 +76,7 @@ body{
     background: var(--primary-DarkTheme-Bg);
     font-family: 'Abel',sans-serif;
     line-height: var(--lineHeight);
-    height: 100vh;
-    width: 100vw;
     letter-spacing: .9em;
-}
-#loader{
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#loader > img{
-    width: 200px;
-}
-#loader.hidden{
-    animation: fadeOut 5s;
-    animation-fill-mode: forwards;
-}
-@keyframes fadeOut{
-    100%{
-        opacity: 0;
-        visibility: hidden;
-    }
 }
 
 h1{ font-size: var(--primary-fs)}
@@ -126,22 +99,21 @@ li{
     grid-template-areas: "main-header main-header main-header main-header main-header main-header"
                         "header header header header header header"
                         "playlist playlist playlist playlist playlist leftSide"
-                        "playlist playlist playlist playlist playlist  leftSide"
-                        "footer footer footer footer footer footer"
-                        "main main main main main main";
+                        "playlist playlist playlist playlist playlist  leftSide"                        
+                        "main main main main main main"
+                        "footer footer footer footer footer footer";
     border: 1px solid white;                       
 }
 .main-header{
     grid-area: main-header;
     position: fixed;
-    display: flex;
     background: var(--primary-DarkTheme-Scolor);
     padding: 10px;
     align-content: center;
     text-align: center;
-    justify-self: flex-start;
-    justify-content: start;
-    width: 50%;
+    justify-self: center;
+    justify-content: center;
+    width: 100%;
 }
 .main-logo{
     width: 100px;
@@ -153,39 +125,24 @@ li{
 }
 .header{
     display: flex;
-    grid-area: header;
     text-align: center;
-    justify-content: center;
-    justify-self: flex-end;
-    width: 50%;
-    margin: 0;
+    grid-area: header;
+    width: 100%;
+    margin-top: 150px;
+    justify-content: flex-end;
     padding: 0;
     background: var(--primary-header-Bg);
+    font-size: var(--secondary-fs);
 }
-
-
 /* ____________________________________Header____________________________________ */
     .header img{
-        max-width: 100px;
-        filter: invert(1);
+        max-width: 70px;
     }
     .header .navbar img{
         max-width: 13px;
         cursor: pointer;
 
     }  
-       .header h1{
-           font-weight: 900;
-           color: var(--primary-white-Clr);
-           word-spacing: var(--word-spacing);
-           letter-spacing: var(--letter-Spacing);
-           text-justify: center;
-           text-align: center;
-           margin-top: 5px;
-           text-transform: uppercase;
-
-       }
-
     /* contact navbar */
     .navbar{
         
@@ -370,7 +327,6 @@ iframe{
 
 #playlist{
     grid-area: playlist;
-    display: flex;
     background: var(--primary-playList-Bg);
     width: 100%;
     padding: 20px;
@@ -607,33 +563,48 @@ iframe{
 
 
 @media (max-width: 722px){
+    h1{
+        font-size: 1.2em;
+        text-align: center;
+    }
+    h2{
+        font-size: .9em;
+    }
+    p{
+        font-size: 1em;
+    }
     .container{
         grid-template-areas:"main-header main-header main-header main-header main-header main-header"
-                            "leftSide leftSide leftSide leftSide leftSide  leftSide"
                             "header header header header header header"
+                            "leftSide leftSide leftSide leftSide leftSide  leftSide"
                             "playlist playlist playlist playlist playlist playlist"                                                                                 
                             "main main main main main main"    
                             "footer footer footer footer footer footer";
     }
     .main-header{
-        position: static;
+        position: fixed;
+        justify-content: flex-end;
+        text-align: center;       
         width: 100%;
         top: 0;
-        margin: 0;
     }
     .header{
-        /* position: static; */
-        width: 100%;
-        background: var(--secondary-light-Background-Tertiary);   
+        text-align: center;
+        justify-content: center;
+        background: var(--secondary-light-Background-Tertiary);
+
     }
-    .header h1{
+    .header h1{  
         font-size: var(--tertiary-fs);
-        word-spacing: .1em;
+        word-spacing: 0.7em;
         color: var(--hover);
     }
     .left-side-bar{
         padding: 20px;
-        height: 300px;
+        background-image: url(/images/Prince\ Niello.jpg);
+        background-size: cover;
+        background-position-x: left;
+        background-attachment: fixed;
     }
     .playlist{
         width: 100%;
@@ -645,7 +616,6 @@ iframe{
         height: 130px;
     }
     .slide{
-        /* position: absolute; */
         margin: 5px;
         width: 120px;
         height: 120px;
@@ -656,57 +626,25 @@ iframe{
     .title_list{
         background: var(--secondary-light-Background-Tertiary);
     }
-}
-@media (max-width: 1080px){
-    .container{
-        grid-template-areas:"main-header main-header main-header main-header main-header main-header"
-                            "leftSide leftSide leftSide leftSide leftSide  leftSide"
-                            "header header header header header header"
-                            "playlist playlist playlist playlist playlist playlist"                                                                                 
-                            "main main main main main main"    
-                            "footer footer footer footer footer footer";
-    }
-    .main-header{
-        position: static;
+    .body_content .list .list_block{
+        position: relative;
+        padding: 20px 5px;
+        background: var(--primary-leftSide-Bg);
+        border: 1px solid transparent;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        top: 0;
-        margin: 0;
+        font-size: 15px;
     }
-    .header{
-        /* position: static; */
-        width: 100%;
-        background: var(--secondary-light-Background-Tertiary);   
-    }
-    .header h1{
+    .body_content .list_block span{
         font-size: var(--tertiary-fs);
-        word-spacing: .1em;
-        color: var(--hover);
+        margin: 0 12px;
+        letter-spacing: normal;
     }
-    .left-side-bar{
-        padding: 20px;
-        height: 300px;
-    }
-    .playlist{
-        width: 100%;
-        position: static;
-        flex: none;
-    }
-    .slider{
-        width: 150px;
-        height: 130px;
-    }
-    .slide{
-        /* position: absolute; */
-        margin: 5px;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%; 
-        overflow: hidden;
-        transition: opacity 0.9s ease-in-out;        
-    }
-    .title_list{
-        background: var(--secondary-light-Background-Tertiary);
-    }
+    
 }
+
 
 
