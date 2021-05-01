@@ -468,12 +468,26 @@ nav ul li a{
 -------------------------------------------------media Player ------------------------------------------------------ */
 .main-content{
     grid-area: main;
-    padding: 0;
     margin: 0;
+    place-items: center;    
+}
+.main-content .main-take{
+    width: 100%;
+    text-align: center;
     display: flex;
-    place-items: center;
-    /* text-justify: end; */
-    
+    justify-content: center;
+}
+.main-content .main-take img{
+    width: 500px;
+}
+.head{
+    background: var(--primary-DarkTheme-Scolor);
+    padding: 10px;
+    align-content: center;
+    text-align: center;
+    justify-self: center;
+    justify-content: center;
+    width: 100%;
 }
 /*
 ---------------------------------------------------media Player -------------------------------------------------------
@@ -536,246 +550,6 @@ iframe{
 }
 
 
-@media (max-width: 600px){
-    h1{
-        font-size: 1.2em;
-        text-align: center;
-    }
-    h2{
-        font-size: .9em;
-    }
-    p{
-        font-size: 1em;
-    }
-    .container{
-        grid-template-areas:"main-header main-header main-header main-header main-header main-header"
-                            "header header header header header header"
-                            "leftSide leftSide leftSide leftSide leftSide  leftSide"
-                            "playlist playlist playlist playlist playlist playlist"                                                                                 
-                            "main main main main main main"    
-                            "footer footer footer footer footer footer";
-    }
-    .main-header{
-        position: fixed;
-        justify-content: flex-end;
-        text-align: center;       
-        width: 100%;
-        top: 0;
-    }
-    .header{
-        text-align: center;
-        justify-content: center;
-        background: var(--secondary-light-Background-Tertiary);
-
-    }
-    .header h1{  
-        font-size: var(--tertiary-fs);
-        word-spacing: 0.7em;
-        color: var(--hover);
-    }
-    .left-side-bar{
-        height: 500px;
-        padding: 20px;
-    }
-    .playlist{
-        width: 100%;
-        position: static;
-        flex: none;
-    }
-    .slider{
-        width: 150px;
-        height: 130px;
-    }
-    .slide{
-        margin: 5px;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%; 
-        overflow: hidden;
-        transition: opacity 0.9s ease-in-out;        
-    }
-    .title_list{
-        background: var(--secondary-light-Background-Tertiary);
-    }
-    .body_content .list .list_block{
-        position: relative;
-        padding: 20px 5px;
-        background: var(--primary-leftSide-Bg);
-        border: 1px solid transparent;
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        font-size: 15px;
-    }
-    .body_content .list_block span{
-        font-size: var(--tertiary-fs);
-        margin: 0 12px;
-        letter-spacing: normal;
-    }
-    
-}
-@media (max-width: 722px){
-    h1{
-        font-size: 1.2em;
-        text-align: center;
-    }
-    h2{
-        font-size: .9em;
-    }
-    p{
-        font-size: 1em;
-    }
-    .container{
-        grid-template-areas:"main-header main-header main-header main-header main-header main-header"
-                            "header header header header header header"
-                            "leftSide leftSide leftSide leftSide leftSide  leftSide"
-                            "playlist playlist playlist playlist playlist playlist"                                                                                 
-                            "main main main main main main"    
-                            "footer footer footer footer footer footer";
-    }
-    .main-header{
-        position: fixed;
-        justify-content: flex-end;
-        text-align: center;       
-        width: 100%;
-        top: 0;
-    }
-    .header{
-        text-align: center;
-        justify-content: center;
-        background: var(--secondary-light-Background-Tertiary);
-
-    }
-    .header h1{  
-        font-size: var(--tertiary-fs);
-        word-spacing: 0.7em;
-        color: var(--hover);
-    }
-    .left-side-bar{
-        height: 500px;
-        padding: 20px;
-    }
-    .playlist{
-        width: 100%;
-        position: static;
-        flex: none;
-    }
-    .slider{
-        width: 150px;
-        height: 130px;
-    }
-    .slide{
-        margin: 5px;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%; 
-        overflow: hidden;
-        transition: opacity 0.9s ease-in-out;        
-    }
-    .title_list{
-        background: var(--secondary-light-Background-Tertiary);
-    }
-    .body_content .list .list_block{
-        position: relative;
-        padding: 20px 5px;
-        background: var(--primary-leftSide-Bg);
-        border: 1px solid transparent;
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        font-size: 15px;
-    }
-    .body_content .list_block span{
-        font-size: var(--tertiary-fs);
-        margin: 0 12px;
-        letter-spacing: normal;
-    }
-    
-}
-@media (max-width: 1000px){
-    h1{
-        font-size: 1.2em;
-        text-align: center;
-    }
-    h2{
-        font-size: .9em;
-    }
-    p{
-        font-size: 1em;
-    }
-    .container{
-        grid-template-areas:"main-header main-header main-header main-header main-header main-header"
-                            "header header header header header header"
-                            "leftSide leftSide leftSide leftSide leftSide  leftSide"
-                            "playlist playlist playlist playlist playlist playlist"                                                                                 
-                            "main main main main main main"    
-                            "footer footer footer footer footer footer";
-    }
-    .main-header{
-        position: fixed;
-        justify-content: flex-end;
-        text-align: center;       
-        width: 100%;
-        top: 0;
-    }
-    .header{
-        text-align: center;
-        justify-content: center;
-        background: var(--secondary-light-Background-Tertiary);
-
-    }
-    .header h1{  
-        font-size: var(--tertiary-fs);
-        word-spacing: 0.7em;
-        color: var(--hover);
-    }
-    .left-side-bar{
-        height: 500px;
-        padding: 20px;
-    }
-    .playlist{
-        width: 100%;
-        position: static;
-        flex: none;
-    }
-    .slider{
-        width: 150px;
-        height: 130px;
-    }
-    .slide{
-        margin: 5px;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%; 
-        overflow: hidden;
-        transition: opacity 0.9s ease-in-out;        
-    }
-    .title_list{
-        background: var(--secondary-light-Background-Tertiary);
-    }
-    .body_content .list .list_block{
-        position: relative;
-        padding: 20px 5px;
-        background: var(--primary-leftSide-Bg);
-        border: 1px solid transparent;
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        font-size: 15px;
-    }
-    .body_content .list_block span{
-        font-size: var(--tertiary-fs);
-        margin: 0 12px;
-        letter-spacing: normal;
-    }
-    
-}
 @media (max-width: 1080px){
     h1{
         font-size: 1.2em;
@@ -856,6 +630,4 @@ iframe{
     }
     
 }
-
-
 
