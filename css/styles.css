@@ -243,13 +243,6 @@ iframe{
     background: none;
 }
 
-@keyframes logo{
-    0% {}
-    50% {background: var(--secondary-leftSide-Bg);
-        box-shadow: inset -1px -1px 3px rgba( 255, 255, 255, 0.1),
-        inset 2px 2px 6px rgba( 0, 0, 0, 0.8);
-    }
-}
 
 
     /* ------cover image------- */
@@ -532,14 +525,7 @@ li:hover{
     max-width: 100vw;
 }
 /* -------------------first page adjustments-------------- */
-@keyframes sidebar-text{
-    0%{
-        transform: perspective(1000px) rotateX(0deg) rotate(0deg);        
-    }
-    100%{
-        transform: perspective(1000px) rotateX(360deg) rotate(0deg);        
-    }
-}
+
 iframe{
     margin: 25px;;
     padding: 0;
