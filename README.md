@@ -1,2 +1,1 @@
-# Prince Niello
- My own music site
+[Music Player](http://princeniello.com)
