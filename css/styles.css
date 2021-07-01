@@ -16,13 +16,13 @@
     --secondary-light-Background-Tertiary: rgb(131, 10, 10);
 
     /* left aside bar  */
-    --primary-leftSide-Bg: rgb(26, 25, 25);
+    --primary-leftSide-Bg: rgb(15, 3, 44);
     --secondary-leftSide-Bg: #091921;
     --tertiary-leftSide-Bg: linear-gradient(to left,#b8d1dd0a, rgb(0, 0, 0));
     /* left aside bar  */
 
     /* hover */
-    --hover: rgb(247, 58, 0);
+    --hover: rgb(202, 247, 0);
 
     /* Font */
     --lineHeight: 1.5;
@@ -570,7 +570,7 @@ iframe{
                             "footer footer footer footer footer footer";
     }
     .main-header{
-        position: fixed;
+        position: absolute;
         justify-content: flex-end;
         text-align: center;       
         width: 100%;
@@ -590,6 +590,7 @@ iframe{
     .left-side-bar{
         height: 500px;
         padding: 20px;
+        background-attachment: scroll;
     }
     .playlist{
         width: 100%;

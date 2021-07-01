@@ -1,16 +1,7 @@
-
-
-        
-
-
-
-
-
 $(document).ready(function(){
 
     let list = $(".list");
     let list_block;
-
 
     for (let key in song_list){
         list_block = $('<div class="list_block"></div>');
@@ -62,8 +53,6 @@ $(document).ready(function(){
     });
 
 });
-
-
 let index_no = 0;
 const song_list = {
         
@@ -123,4 +112,27 @@ const song_list = {
         duration: "3:00",
         track: "/songs/WayUp.mp3"
         },
-}
+    "10": {
+        title: "Formula",
+        artist: "*New**",
+        genre: "Drill",
+        duration: "3:00",
+        track: "/songs/formula.mp3"
+        },
+    "11": {
+        title: "Mickey",
+        artist: " **Brand New**",
+        genre: "Drill",
+        duration: "3:00",
+        track: "/songs/Mickey.mp3"
+        },
+    "12": {
+        title: "Stay Scheming",
+        artist: " **Brand New**",
+        genre: "Drill",
+        duration: "3:00",
+        track: "/songs/Stay scheming.mp3"
+        }
+
+};
+
